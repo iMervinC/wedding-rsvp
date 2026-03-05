@@ -5,6 +5,26 @@
 :root {
   --font-playfair: 'Playfair Display', serif;
   --font-lato: 'Lato', sans-serif;
+
+  /* Colors — edit here to update the whole site */
+  --color-ivory: #fdf6ec;
+  --color-blush-50: #fdf2f5;
+  --color-blush-200: #f9c7d4;
+  --color-blush-300: #f4a0bb;
+  --color-blush-400: #ec7499;
+  --color-blush-500: #e04f7a;
+  --color-blush-600: #cc2f5e;
+  --color-blush-700: #a82249;
+  --color-blush-800: #8c1e3d;
+  --color-blush-900: #751d35;
+  --color-gold-300: #e8d080;
+  --color-gold-400: #d4b96a;
+  --color-gold-500: #c9a84c;
+  --color-gold-600: #b08d34;
+  --color-sage-300: #b5c9a8;
+  --color-sage-400: #9cba8d;
+  --color-sage-500: #8fa882;
+  --color-sage-600: #6d8a61;
 }
 
 html {
@@ -12,7 +32,7 @@ html {
 }
 
 body {
-  background-color: #fdf6ec;
+  background-color: var(--color-ivory);
   color: #3d3d3d;
   font-family: var(--font-lato), system-ui, sans-serif;
 }
@@ -22,19 +42,19 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #fdf6ec;
+  background: var(--color-ivory);
 }
 ::-webkit-scrollbar-thumb {
-  background: #f4a0bb;
+  background: var(--color-blush-300);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #ec7499;
+  background: var(--color-blush-400);
 }
 
 /* Focus ring */
 *:focus-visible {
-  outline: 2px solid #e04f7a;
+  outline: 2px solid var(--color-blush-500);
   outline-offset: 2px;
 }
 
