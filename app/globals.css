@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-playfair: 'Playfair Display', serif;
+  --font-lato: 'Lato', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fdf6ec;
+  color: #3d3d3d;
+  font-family: var(--font-lato), system-ui, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fdf6ec;
+}
+::-webkit-scrollbar-thumb {
+  background: #f4a0bb;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ec7499;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid #e04f7a;
+  outline-offset: 2px;
+}
+
+@layer components {
+  .section-title {
+    @apply font-serif text-4xl md:text-5xl text-blush-700 text-center mb-4;
+  }
+  .section-subtitle {
+    @apply text-center text-blush-400 font-serif italic text-lg mb-12;
+  }
+  .btn-primary {
+    @apply inline-block bg-blush-500 hover:bg-blush-600 text-white font-sans font-semibold
+           px-8 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg
+           hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-2
+           focus-visible:ring-blush-500 focus-visible:ring-offset-2;
+  }
+  .btn-outline {
+    @apply inline-block border-2 border-blush-400 text-blush-600 hover:bg-blush-50
+           font-sans font-semibold px-8 py-3 rounded-full transition-all duration-300;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-blush-200 bg-white/80
+           placeholder-gray-400 text-gray-700 focus:outline-none focus:border-blush-400
+           focus:ring-2 focus:ring-blush-200 transition-all duration-200;
+  }
+  .divider {
+    @apply flex items-center gap-4 text-gold-400 my-2;
+  }
+  .divider::before,
+  .divider::after {
+    content: '';
+    @apply flex-1 h-px bg-gold-300;
+  }
+}
