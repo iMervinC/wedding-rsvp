@@ -40,11 +40,11 @@ export default function Hero() {
         </p>
 
         <h1 className="font-serif text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-blush-700 leading-none mb-4 animate-fade-up">
-          Sophie
+        Nicowell
           <span className="block text-4xl sm:text-5xl md:text-6xl text-gold-500 font-normal italic my-3 md:my-4">
             &amp;
           </span>
-          James
+          Bernadette
         </h1>
 
         <div className="divider my-8 animate-fade-up-delay">
@@ -52,10 +52,10 @@ export default function Hero() {
         </div>
 
         <p className="font-sans text-gray-500 text-lg md:text-xl tracking-widest uppercase font-light mb-2 animate-fade-up-delay">
-          Saturday, June 15, 2026
+          Sunday, May 10, 2026
         </p>
         <p className="font-sans text-gray-400 text-base md:text-lg tracking-wider animate-fade-up-delay">
-          Villa Medicea di Lilliano · Tuscany, Italy
+          Chancery, San Fernando, Pampanga
         </p>
 
         <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-delay-2">

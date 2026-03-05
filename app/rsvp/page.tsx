@@ -4,7 +4,7 @@ import RSVPForm from '@/components/RSVPForm';
 
 export const metadata: Metadata = {
   title: 'RSVP',
-  description: 'Kindly reply to the wedding invitation of Sophie & James.',
+  description: 'Kindly reply to the wedding invitation of Bernadette & Nicowell.',
 };
 
 export default function RSVPPage() {

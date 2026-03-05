@@ -40,7 +40,7 @@ export default function Navigation() {
           href="/"
           className="font-serif italic text-2xl text-blush-600 hover:text-blush-800 transition-colors"
         >
-          S &amp; J
+          N &amp; B
         </Link>
 
         {/* Desktop Links */}

@@ -20,19 +20,19 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yourweddingsite.com
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Sophie & James — Wedding | June 15, 2026',
-    template: '%s | Sophie & James Wedding',
+    default: 'Bernadette & Nicowell — Wedding | June 15, 2026',
+    template: '%s | Bernadette & Nicowell Wedding',
   },
   description:
-    'Join us to celebrate the wedding of Sophie and James on June 15, 2026 in Tuscany, Italy. RSVP now.',
-  keywords: ['wedding', 'RSVP', 'Sophie', 'James', 'celebration'],
-  authors: [{ name: 'Sophie & James' }],
+    'Join us to celebrate the wedding of Bernadette and Nicowell on June 15, 2026 in Tuscany, Italy. RSVP now.',
+  keywords: ['wedding', 'RSVP', 'Bernadette', 'Nicowell', 'celebration'],
+  authors: [{ name: 'Bernadette & Nicowell' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: siteUrl,
-    siteName: 'Sophie & James Wedding',
-    title: 'Sophie & James — Getting Married!',
+    siteName: 'Bernadette & Nicowell Wedding',
+    title: 'Bernadette & Nicowell — Getting Married!',
     description:
       'We are tying the knot on June 15, 2026. Join us for the celebration of a lifetime.',
     images: [
@@ -40,13 +40,13 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Sophie & James Wedding',
+        alt: 'Bernadette & Nicowell Wedding',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sophie & James — Getting Married!',
+    title: 'Bernadette & Nicowell — Getting Married!',
     description: 'Join us on June 15, 2026 for our special day.',
     images: ['/og-image.jpg'],
   },

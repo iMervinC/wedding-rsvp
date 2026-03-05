@@ -14,14 +14,14 @@ const milestones: StoryMilestone[] = [
     year: '2019',
     title: 'The First Meeting',
     description:
-      'We met at a mutual friend\'s art gallery opening in Florence. James was admiring a painting Sophie had recommended — neither of them knew yet that the real masterpiece that evening was their conversation.',
+      'We met at a mutual friend\'s art gallery opening in Florence. Nicowell was admiring a painting Bernadette had recommended — neither of them knew yet that the real masterpiece that evening was their conversation.',
     emoji: '🎨',
   },
   {
     year: '2020',
     title: 'Our First Date',
     description:
-      'A candlelit dinner at a tiny trattoria in the backstreets of Rome. James got completely lost trying to find it, but Sophie says the hour she spent waiting was worth every minute.',
+      'A candlelit dinner at a tiny trattoria in the backstreets of Rome. Nicowell got completely lost trying to find it, but Bernadette says the hour she spent waiting was worth every minute.',
     emoji: '🕯️',
   },
   {
@@ -35,7 +35,7 @@ const milestones: StoryMilestone[] = [
     year: '2025',
     title: 'The Proposal',
     description:
-      'Under a Tuscan sunset, beside the very vineyard where we will be married, James got down on one knee. Sophie said yes before he had even finished the question.',
+      'Under a Tuscan sunset, beside the very vineyard where we will be married, Nicowell got down on one knee. Bernadette said yes before he had even finished the question.',
     emoji: '💍',
   },
 ];
