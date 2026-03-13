@@ -51,12 +51,6 @@ export default function Hero() {
           <Link href="/rsvp" className="btn-primary">
             Kindly RSVP
           </Link>
-          <button
-            onClick={() => document.getElementById('our-story')?.scrollIntoView({ behavior: 'smooth' })}
-            className="btn-outline"
-          >
-            Our Story
-          </button>
         </div>
       </div>
 

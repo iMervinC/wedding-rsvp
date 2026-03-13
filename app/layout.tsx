@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: '%s | Bernadette & Nicowell Wedding',
   },
   description:
-    'Join us to celebrate the wedding of Bernadette and Nicowell on June 15, 2026 in Tuscany, Italy. RSVP now.',
+    'Join us to celebrate the wedding of Bernadette and Nicowell on June 15, 2026. RSVP now.',
   keywords: ['wedding', 'RSVP', 'Bernadette', 'Nicowell', 'celebration'],
   authors: [{ name: 'Bernadette & Nicowell' }],
   openGraph: {

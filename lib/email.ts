@@ -125,7 +125,7 @@ export function buildGuestConfirmationEmail(data: RSVPFormData): { subject: stri
             <td style="background:linear-gradient(135deg,#e04f7a,#cc2f5e);padding:40px;text-align:center;">
               <p style="margin:0 0 6px;color:rgba(255,255,255,0.75);font-size:15px;font-style:italic;">RSVP Confirmation</p>
               <h1 style="margin:0;color:#ffffff;font-size:38px;font-weight:normal;">Bernadette &amp; Nicowell</h1>
-              <p style="margin:10px 0 0;color:rgba(255,255,255,0.7);font-size:13px;font-family:sans-serif;letter-spacing:3px;text-transform:uppercase;">June 15, 2026 · Tuscany, Italy</p>
+              <p style="margin:10px 0 0;color:rgba(255,255,255,0.7);font-size:13px;font-family:sans-serif;letter-spacing:3px;text-transform:uppercase;">June 15, 2026</p>
             </td>
           </tr>
 
@@ -164,7 +164,7 @@ export function buildGuestConfirmationEmail(data: RSVPFormData): { subject: stri
                       <p style="margin:0;color:#374151;font-family:sans-serif;font-size:14px;line-height:1.7;">
                         <strong>Date:</strong> Saturday, June 15, 2026<br>
                         <strong>Ceremony:</strong> 4:00 PM (arrive from 3:00 PM)<br>
-                        <strong>Venue:</strong> Villa Medicea di Lilliano, Tuscany, Italy<br>
+                        <strong>Venue:</strong> Chancery, San Fernando, Pampanga<br>
                         <strong>Dress Code:</strong> Garden formal
                       </p>
                     </div>`
@@ -196,7 +196,7 @@ export function buildGuestConfirmationEmail(data: RSVPFormData): { subject: stri
   `.trim();
 
   const text = attending
-    ? `Dear ${firstName},\n\nThank you for your RSVP! We are so excited to have you at our wedding on June 15, 2026.\n\nVenue: Villa Medicea di Lilliano, Tuscany, Italy\nCeremony: 4:00 PM\n\nWith love,\nBernadette & Nicowell`
+    ? `Dear ${firstName},\n\nThank you for your RSVP! We are so excited to have you at our wedding on June 15, 2026.\n\nVenue: Chancery, San Fernando, Pampanga\nCeremony: 4:00 PM\n\nWith love,\nBernadette & Nicowell`
     : `Dear ${firstName},\n\nThank you for letting us know. We will miss you on our special day.\n\nWith love,\nBernadette & Nicowell`;
 
   return {
