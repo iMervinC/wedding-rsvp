@@ -110,14 +110,14 @@ export default function FinerDetails() {
                     {/* Neck */}
                     <rect x="36" y="29" width="8" height="7" fill="#f5cba7" />
                     {/* Bodice */}
-                    <path d="M26 35 Q40 30 54 35 L56 72 H24 Z" fill="#8b1a2e" />
+                    <path d="M26 35 Q40 30 54 35 L56 72 H24 Z" fill="#DCB2B4" />
                     {/* Arms */}
                     <path d="M26 37 Q16 52 18 78 L24 76 Q22 55 30 44 Z" fill="#f5cba7" />
                     <path d="M54 37 Q64 52 62 78 L56 76 Q58 55 50 44 Z" fill="#f5cba7" />
                     {/* Midi skirt - flared */}
-                    <path d="M24 70 Q16 100 10 155 H70 Q64 100 56 70 Z" fill="#a0223a" />
+                    <path d="M24 70 Q16 100 10 155 H70 Q64 100 56 70 Z" fill="#DCB2B4" />
                     {/* Skirt overlay for depth */}
-                    <path d="M30 70 Q26 100 22 140 H58 Q54 100 50 70 Z" fill="#8b1a2e" opacity="0.4" />
+                    <path d="M30 70 Q26 100 22 140 H58 Q54 100 50 70 Z" fill="#DCB2B4" opacity="0.4" />
                     {/* Shoes */}
                     <ellipse cx="28" cy="156" rx="8" ry="4" fill="#3b1a20" />
                     <ellipse cx="52" cy="156" rx="8" ry="4" fill="#3b1a20" />

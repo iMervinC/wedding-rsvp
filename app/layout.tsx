@@ -21,19 +21,19 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yourweddingsite.com
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Bernadette & Nicowell — Wedding | June 15, 2026',
-    template: '%s | Bernadette & Nicowell Wedding',
+    default: 'Bernadette & Nicowel — Wedding | June 15, 2026',
+    template: '%s | Bernadette & Nicowel Wedding',
   },
   description:
-    'Join us to celebrate the wedding of Bernadette and Nicowell on June 15, 2026. RSVP now.',
-  keywords: ['wedding', 'RSVP', 'Bernadette', 'Nicowell', 'celebration'],
-  authors: [{ name: 'Bernadette & Nicowell' }],
+    'Join us to celebrate the wedding of Bernadette and Nicowel on June 15, 2026. RSVP now.',
+  keywords: ['wedding', 'RSVP', 'Bernadette', 'Nicowel', 'celebration'],
+  authors: [{ name: 'Bernadette & Nicowel' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: siteUrl,
-    siteName: 'Bernadette & Nicowell Wedding',
-    title: 'Bernadette & Nicowell — Getting Married!',
+    siteName: 'Bernadette & Nicowel Wedding',
+    title: 'Bernadette & Nicowel — Getting Married!',
     description:
       'We are tying the knot on June 15, 2026. Join us for the celebration of a lifetime.',
     images: [
@@ -41,13 +41,13 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Bernadette & Nicowell Wedding',
+        alt: 'Bernadette & Nicowel Wedding',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bernadette & Nicowell — Getting Married!',
+    title: 'Bernadette & Nicowel — Getting Married!',
     description: 'Join us on June 15, 2026 for our special day.',
     images: ['/og-image.jpg'],
   },

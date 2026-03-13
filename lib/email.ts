@@ -30,7 +30,7 @@ export function buildCoupleEmail(data: RSVPFormData): { subject: string; html: s
           <tr>
             <td style="background:linear-gradient(135deg,#e04f7a,#cc2f5e);padding:40px 40px 30px;text-align:center;">
               <p style="margin:0 0 8px;font-style:italic;color:rgba(255,255,255,0.8);font-size:16px;">New RSVP Received</p>
-              <h1 style="margin:0;color:#ffffff;font-size:36px;font-weight:normal;letter-spacing:1px;">Bernadette &amp; Nicowell</h1>
+              <h1 style="margin:0;color:#ffffff;font-size:36px;font-weight:normal;letter-spacing:1px;">Bernadette &amp; Nicowel</h1>
               <p style="margin:8px 0 0;color:rgba(255,255,255,0.7);font-size:14px;font-family:sans-serif;letter-spacing:2px;text-transform:uppercase;">Wedding · June 15, 2026</p>
             </td>
           </tr>
@@ -68,7 +68,7 @@ export function buildCoupleEmail(data: RSVPFormData): { subject: string; html: s
           <!-- Footer -->
           <tr>
             <td style="background:#fdf2f5;padding:24px 40px;text-align:center;border-top:1px solid #fce4ec;">
-              <p style="margin:0;font-style:italic;color:#e04f7a;font-size:18px;">Bernadette &amp; Nicowell · June 15, 2026</p>
+              <p style="margin:0;font-style:italic;color:#e04f7a;font-size:18px;">Bernadette &amp; Nicowel · June 15, 2026</p>
             </td>
           </tr>
 
@@ -124,7 +124,7 @@ export function buildGuestConfirmationEmail(data: RSVPFormData): { subject: stri
           <tr>
             <td style="background:linear-gradient(135deg,#e04f7a,#cc2f5e);padding:40px;text-align:center;">
               <p style="margin:0 0 6px;color:rgba(255,255,255,0.75);font-size:15px;font-style:italic;">RSVP Confirmation</p>
-              <h1 style="margin:0;color:#ffffff;font-size:38px;font-weight:normal;">Bernadette &amp; Nicowell</h1>
+              <h1 style="margin:0;color:#ffffff;font-size:38px;font-weight:normal;">Bernadette &amp; Nicowel</h1>
               <p style="margin:10px 0 0;color:rgba(255,255,255,0.7);font-size:13px;font-family:sans-serif;letter-spacing:3px;text-transform:uppercase;">June 15, 2026</p>
             </td>
           </tr>
@@ -183,7 +183,7 @@ export function buildGuestConfirmationEmail(data: RSVPFormData): { subject: stri
           <!-- Footer -->
           <tr>
             <td style="background:#fdf2f5;padding:24px 40px;text-align:center;border-top:1px solid #fce4ec;">
-              <p style="margin:0;font-style:italic;color:#e04f7a;font-size:20px;">With love, Bernadette &amp; Nicowell</p>
+              <p style="margin:0;font-style:italic;color:#e04f7a;font-size:20px;">With love, Bernadette &amp; Nicowel</p>
             </td>
           </tr>
 
@@ -196,13 +196,13 @@ export function buildGuestConfirmationEmail(data: RSVPFormData): { subject: stri
   `.trim();
 
   const text = attending
-    ? `Dear ${firstName},\n\nThank you for your RSVP! We are so excited to have you at our wedding on June 15, 2026.\n\nVenue: Chancery, San Fernando, Pampanga\nCeremony: 4:00 PM\n\nWith love,\nBernadette & Nicowell`
-    : `Dear ${firstName},\n\nThank you for letting us know. We will miss you on our special day.\n\nWith love,\nBernadette & Nicowell`;
+    ? `Dear ${firstName},\n\nThank you for your RSVP! We are so excited to have you at our wedding on June 15, 2026.\n\nVenue: Chancery, San Fernando, Pampanga\nCeremony: 4:00 PM\n\nWith love,\nBernadette & Nicowel`
+    : `Dear ${firstName},\n\nThank you for letting us know. We will miss you on our special day.\n\nWith love,\nBernadette & Nicowel`;
 
   return {
     subject: attending
-      ? 'Your RSVP is confirmed — Bernadette & Nicowell Wedding'
-      : 'We received your RSVP — Bernadette & Nicowell Wedding',
+      ? 'Your RSVP is confirmed — Bernadette & Nicowel Wedding'
+      : 'We received your RSVP — Bernadette & Nicowel Wedding',
     html,
     text,
   };

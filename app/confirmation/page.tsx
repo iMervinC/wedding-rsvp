@@ -87,7 +87,7 @@ export default function ConfirmationPage({ searchParams }: Props) {
         </div>
 
         <p className="mt-10 font-serif italic text-blush-400 text-2xl">
-          Bernadette &amp; Nicowell
+          Bernadette &amp; Nicowel
         </p>
       </div>
     </main>

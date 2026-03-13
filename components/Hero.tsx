@@ -29,7 +29,7 @@ export default function Hero() {
         </p>
 
         <h1 className="font-serif text-5xl sm:text-6xl md:text-8xl lg:text-9xl text-white leading-none mb-4 animate-fade-up">
-          Nicowell
+          Nicowel
           <span className="block text-3xl sm:text-4xl md:text-6xl text-gold-300 font-normal italic my-2 md:my-4">
             &amp;
           </span>
