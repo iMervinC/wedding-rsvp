@@ -2,8 +2,8 @@ import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import Countdown from '@/components/Countdown';
 import OurStory from '@/components/OurStory';
-import Timeline from '@/components/Timeline';
 import Gallery from '@/components/Gallery';
+import FinerDetails from '@/components/FinerDetails';
 import VenueMap from '@/components/VenueMap';
 import RSVPCta from '@/components/RSVPCta';
 
@@ -14,8 +14,8 @@ export default function HomePage() {
       <Hero />
       <Countdown />
       <OurStory />
-      <Timeline />
       <Gallery />
+      <FinerDetails />
       <VenueMap />
       <RSVPCta />
       <footer className="bg-blush-700 text-blush-100 text-center py-8 font-sans text-sm">

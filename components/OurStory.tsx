@@ -11,31 +11,24 @@ interface StoryMilestone {
 
 const milestones: StoryMilestone[] = [
   {
+    year: '2015',
+    title: 'How It All Started',
+    description:
+      'Bernadette and Nicowel were college blockmates taking up BS Medical Technology in 2015. They didn\'t get along at first and often argued — especially over one chemistry homework. But in March 2017, Nicowel finally confessed that he liked Bernadette, turning their story from enemies to lovers.',
+    emoji: '🔬',
+  },
+  {
     year: '2019',
-    title: 'The First Meeting',
+    title: 'Trust in the Process',
     description:
-      'We met at a mutual friend\'s art gallery opening in Florence. Nicowell was admiring a painting Bernadette had recommended — neither of them knew yet that the real masterpiece that evening was their conversation.',
-    emoji: '🎨',
-  },
-  {
-    year: '2020',
-    title: 'Our First Date',
-    description:
-      'A candlelit dinner at a tiny trattoria in the backstreets of Rome. Nicowell got completely lost trying to find it, but Bernadette says the hour she spent waiting was worth every minute.',
-    emoji: '🕯️',
-  },
-  {
-    year: '2022',
-    title: 'Moving In Together',
-    description:
-      'We found a little apartment in Trastevere with a rooftop terrace overlooking the city. Our neighbour gifted us an olive tree that we still tend to this day.',
-    emoji: '🏡',
+      'Nicowel courted Bernadette for two years before they became a couple. Together, they supported each other through college and passed the board exam in 2019. In 2023, Bernadette moved to Canada, testing their relationship with distance — but their love only grew stronger.',
+    emoji: '🩺',
   },
   {
     year: '2025',
     title: 'The Proposal',
     description:
-      'Under a Tuscan sunset, beside the very vineyard where we will be married, Nicowell got down on one knee. Bernadette said yes before he had even finished the question.',
+      'After nearly two years apart, Bernadette returned to the Philippines. On March 11, 2025, during their trip to Boracay, Nicowel surprised Bernadette with a proposal during their photoshoot — and Bernadette said yes. 🤍\n\n"Sa hinahaba-haba man ng prusisyon, sa simbahan pa rin ang tuloy." 🤍',
     emoji: '💍',
   },
 ];
@@ -57,7 +50,7 @@ function MilestoneCard({ milestone, index }: { milestone: StoryMilestone; index:
           {milestone.year}
         </span>
         <h3 className="font-serif text-2xl md:text-3xl text-blush-700 mb-3">{milestone.title}</h3>
-        <p className="font-sans text-gray-600 leading-relaxed">{milestone.description}</p>
+        <p className="font-sans text-gray-600 leading-relaxed whitespace-pre-line">{milestone.description}</p>
       </div>
 
       {/* Center icon */}
@@ -90,8 +83,7 @@ export default function OurStory() {
             <span className="text-gold-400 text-lg select-none">&#x2665;</span>
           </div>
           <p className="mt-6 text-gray-600 font-sans leading-relaxed max-w-2xl mx-auto">
-            Two hearts, one journey. From a chance meeting in Florence to a lifetime commitment
-            in the Tuscan hills — here is a glimpse of the moments that brought us here.
+            From blockmates to lovers — here is a glimpse of the journey that brought Bernadette and Nicowel to forever.
           </p>
         </div>
 

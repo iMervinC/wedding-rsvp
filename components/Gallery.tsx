@@ -5,36 +5,15 @@ import { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 const photos = [
-  {
-    src: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80',
-    alt: 'Couple walking in vineyard',
-    span: 'md:col-span-2 md:row-span-2',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1529636798458-92182e662485?w=800&q=80',
-    alt: 'Wedding rings on flowers',
-    span: '',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1606216794079-73b1f3de9753?w=800&q=80',
-    alt: 'Couple at sunset',
-    span: '',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&q=80',
-    alt: 'Wedding table setting',
-    span: '',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80',
-    alt: 'Bouquet of flowers',
-    span: '',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80',
-    alt: 'Couple dancing',
-    span: 'md:col-span-2',
-  },
+  { src: '/images/CoupleShot.jpg', alt: 'Bernadette and Nicowel', span: 'md:col-span-2 md:row-span-2' },
+  { src: '/images/KneelShot.jpg', alt: 'The proposal', span: '' },
+  { src: '/images/SFP_9397.jpg', alt: 'Couple photo', span: '' },
+  { src: '/images/SFP_9411.jpg', alt: 'Couple photo', span: '' },
+  { src: '/images/SFP_9426.JPG', alt: 'Couple photo', span: '' },
+  { src: '/images/SFP_9435.jpg', alt: 'Couple photo', span: 'md:col-span-2' },
+  { src: '/images/SFP_9453.jpg', alt: 'Couple photo', span: '' },
+  { src: '/images/SFP_9457.JPG', alt: 'Couple photo', span: '' },
+  { src: '/images/SFP_9459.jpg', alt: 'Couple photo', span: '' },
 ];
 
 interface PhotoCardProps {
@@ -70,7 +49,7 @@ function PhotoCard({ src, alt, span, index, onClick }: PhotoCardProps) {
           alt={alt}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          className="object-cover object-[center_20%] transition-transform duration-700 group-hover:scale-105"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-blush-900/0 group-hover:bg-blush-900/20 transition-all duration-300" />
@@ -112,7 +91,7 @@ export default function Gallery() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[200px] md:auto-rows-[240px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[320px] md:auto-rows-[240px]">
           {photos.map((photo, i) => (
             <PhotoCard
               key={photo.src}
@@ -123,9 +102,6 @@ export default function Gallery() {
           ))}
         </div>
 
-        <p className="text-center mt-8 font-sans text-sm text-gray-400 italic">
-          More photos coming soon — stay tuned!
-        </p>
       </div>
 
       {/* Lightbox */}

@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --font-playfair: 'Playfair Display', serif;
-  --font-lato: 'Lato', sans-serif;
-
   /* Colors — edit here to update the whole site */
   --color-ivory: #fdf6ec;
   --color-blush-50: #fdf2f5;

@@ -1,10 +1,11 @@
 'use client';
 
+import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
 
 const GOOGLE_MAPS_EMBED_URL =
   process.env.NEXT_PUBLIC_GOOGLE_MAPS_EMBED_URL ??
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.123456789!2d11.255!3d43.745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDQ0JzQyLjAiTiAxMcKwMTUnMTguMCJF!5e0!3m2!1sen!2sit!4v1680000000000!5m2!1sen!2sit';
+  'https://maps.google.com/maps?q=Arzobispado+De+Pampanga+San+Fernando+Pampanga+Philippines&output=embed&z=16';
 
 interface DetailItem {
   label: string;
@@ -13,11 +14,9 @@ interface DetailItem {
 }
 
 const venueDetails: DetailItem[] = [
-  { label: 'Venue', value: 'Villa Medicea di Lilliano', icon: '🏛️' },
-  { label: 'Address', value: 'Via di Lilliano 8, 50012 Tuscany, Italy', icon: '📍' },
-  { label: 'Date', value: 'Saturday, June 15, 2026', icon: '📅' },
-  { label: 'Ceremony', value: '4:00 PM (doors open at 3:00 PM)', icon: '💒' },
-  { label: 'Dress Code', value: 'Garden formal — think florals & pastels!', icon: '👗' },
+  { label: 'Venue', value: 'Chancery (Arzobispado De Pampanga)', icon: '🏛️' },
+  { label: 'Address', value: 'San Fernando, Pampanga, Philippines', icon: '📍' },
+  { label: 'Date', value: 'May 10, 2026', icon: '📅' },
 ];
 
 export default function VenueMap() {
@@ -79,16 +78,22 @@ export default function VenueMap() {
               ))}
             </ul>
 
-            <div className="mt-8 pt-6 border-t border-blush-100">
-              <p className="font-sans text-sm text-gray-500 leading-relaxed">
-                <strong className="text-blush-600">Parking</strong> is available on site.
-                Shuttle buses will run between the venue and nearby hotels from 3:00 PM
-                and last drop-off at 1:00 AM.
-              </p>
+            <div className="mt-8 pt-6 border-t border-blush-100 flex items-center gap-4">
+              <Image
+                src="/images/qr-code.png"
+                alt="QR Code for venue directions"
+                width={90}
+                height={90}
+                className="rounded-lg border border-blush-200 flex-shrink-0"
+              />
+              <div>
+                <span className="block font-sans text-xs uppercase tracking-widest text-gray-400 font-semibold mb-1">Scan for Directions</span>
+                <p className="font-sans text-gray-600 text-sm leading-relaxed">Point your camera at this QR code to open the venue in Google Maps.</p>
+              </div>
             </div>
 
             <a
-              href="https://maps.google.com"
+              href="https://maps.google.com/?q=Arzobispado+De+Pampanga+San+Fernando+Pampanga+Philippines"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline mt-6 inline-block text-sm py-2"
@@ -97,6 +102,7 @@ export default function VenueMap() {
             </a>
           </div>
         </div>
+
       </div>
     </section>
   );

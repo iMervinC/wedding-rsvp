@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(magick --version 2>/dev/null || convert --version 2>/dev/null || echo \"not available\")",
+      "Bash(python3 -c \"from PIL import Image; print\\('ok'\\)\" 2>/dev/null || python -c \"from PIL import Image; print\\('ok'\\)\" 2>/dev/null || echo \"not available\")",
+      "Bash(node -e \"const sharp = require\\('sharp'\\); console.log\\('ok'\\)\" 2>/dev/null || echo \"not available\")",
+      "Bash(cd C:/Users/itorm/wedding-rsvp && npm install qrcode --save-dev 2>&1 | tail -3)",
+      "Bash(cd C:/Users/itorm/wedding-rsvp && node -e \"\nconst QRCode = require\\('qrcode'\\);\nQRCode.toFile\\('public/images/qr-code.png', 'https://maps.google.com/?q=Chancery+Arzobispado+De+Pampanga+San+Fernando+Pampanga', {\n  width: 300,\n  margin: 2,\n  color: { dark: '#6b1a2a', light: '#ffffff' }\n}, \\(err\\) => { if\\(err\\) console.error\\(err\\); else console.log\\('done'\\); }\\);\n\")"
+    ]
+  }
+}
