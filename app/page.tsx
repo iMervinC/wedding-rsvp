@@ -6,8 +6,10 @@ import Gallery from '@/components/Gallery';
 import FinerDetails from '@/components/FinerDetails';
 import VenueMap from '@/components/VenueMap';
 import RSVPCta from '@/components/RSVPCta';
+import { useEffect } from 'react';
 
 export default function HomePage() {
+
   return (
     <main className="min-h-screen bg-ivory">
       <Navigation />

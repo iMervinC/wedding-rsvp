@@ -16,6 +16,11 @@ export default function Navigation() {
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener('scroll', handleScroll, { passive: true });
+
+    console.log('[RSVP] RESEND_API_KEY:', process.env.RESEND_API_KEY ? `set (${process.env.RESEND_API_KEY.slice(0, 8)}...)` : 'MISSING');
+    console.log('[RSVP] COUPLE_EMAIL:', process.env.COUPLE_EMAIL ?? 'MISSING');
+    console.log('[RSVP] FROM_EMAIL:', process.env.FROM_EMAIL ?? 'MISSING');
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
