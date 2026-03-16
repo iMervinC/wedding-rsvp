@@ -21,11 +21,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yourweddingsite.com
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Bernadette & Nicowel — Wedding | June 15, 2026',
+    default: 'Bernadette & Nicowel — Wedding | May 10, 2026',
     template: '%s | Bernadette & Nicowel Wedding',
   },
   description:
-    'Join us to celebrate the wedding of Bernadette and Nicowel on June 15, 2026. RSVP now.',
+    'Join us to celebrate the wedding of Bernadette and Nicowel on May 10, 2026. RSVP now.',
   keywords: ['wedding', 'RSVP', 'Bernadette', 'Nicowel', 'celebration'],
   authors: [{ name: 'Bernadette & Nicowel' }],
   openGraph: {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: 'Bernadette & Nicowel Wedding',
     title: 'Bernadette & Nicowel — Getting Married!',
     description:
-      'We are tying the knot on June 15, 2026. Join us for the celebration of a lifetime.',
+      'We are tying the knot on May 10, 2026. Join us for the celebration of a lifetime.',
     images: [
       {
         url: '/og-image.jpg',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Bernadette & Nicowel — Getting Married!',
-    description: 'Join us on June 15, 2026 for our special day.',
+    description: 'Join us on May 10, 2026 for our special day.',
     images: ['/og-image.jpg'],
   },
   robots: {

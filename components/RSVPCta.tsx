@@ -37,7 +37,7 @@ export default function RSVPCta() {
         </div>
         <p className="font-sans text-white/80 text-lg leading-relaxed mb-10 max-w-lg mx-auto">
           We would be honoured to have you celebrate this momentous occasion with us.
-          Please RSVP by <strong className="text-white">May 1, 2026</strong>.
+          Please RSVP by <strong className="text-white">April 20, 2026</strong>.
         </p>
         <Link
           href="/rsvp"

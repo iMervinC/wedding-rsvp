@@ -52,7 +52,7 @@ export default function RSVPPage() {
             <p className="text-gray-600 font-sans mt-4 leading-relaxed">
               We would be delighted to have you join us on our special day.
               <br className="hidden sm:block" />
-              Please respond by <strong>May 1, 2026</strong>.
+              Please respond by <strong>April 20, 2026</strong>.
             </p>
           </div>
 

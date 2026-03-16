@@ -71,7 +71,7 @@ export default function ConfirmationPage({ searchParams }: Props) {
           <p className="text-gray-600 font-sans text-lg leading-relaxed mb-8">
             We are so excited to celebrate with you! A confirmation email has been sent
             to your inbox with all the details. We cannot wait to see you on{' '}
-            <strong>June 15, 2026</strong>.
+            <strong>May 10, 2026</strong>.
           </p>
         ) : (
           <p className="text-gray-600 font-sans text-lg leading-relaxed mb-8">

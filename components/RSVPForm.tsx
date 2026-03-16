@@ -219,22 +219,6 @@ export default function RSVPForm() {
           <FieldError message={errors.message?.message} />
         </div>
 
-        {/* Song request */}
-        <div>
-          <Label htmlFor="songRequest">Song Request <span className="font-normal text-gray-400">(optional)</span></Label>
-          <input
-            id="songRequest"
-            type="text"
-            placeholder="e.g. Perfect — Ed Sheeran"
-            className="input-field"
-            {...register('songRequest')}
-          />
-          <p className="mt-1.5 font-sans text-xs text-gray-400">
-            We will do our best to get the DJ to play your request!
-          </p>
-          <FieldError message={errors.songRequest?.message} />
-        </div>
-
         {/* Server error */}
         {serverError && (
           <div

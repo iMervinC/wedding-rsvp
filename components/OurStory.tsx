@@ -77,7 +77,6 @@ export default function OurStory() {
             headerInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <p className="font-serif italic text-gold-500 text-lg mb-2">How it all began</p>
           <h2 className="section-title">Our Story</h2>
           <div className="divider w-48 mx-auto mt-4">
             <span className="text-gold-400 text-lg select-none">&#x2665;</span>

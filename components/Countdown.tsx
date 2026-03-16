@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-const WEDDING_DATE = new Date('2026-06-15T16:00:00');
+const WEDDING_DATE = new Date('2026-05-10T16:00:00');
 
 interface TimeLeft {
   days: number;
@@ -77,7 +77,7 @@ export default function Countdown() {
       <div className="max-w-4xl mx-auto px-4 text-center">
         <p className="font-serif italic text-gold-500 text-lg mb-2">Counting down to</p>
         <h2 className="section-title">Our Big Day</h2>
-        <p className="section-subtitle">June 15, 2026</p>
+        <p className="section-subtitle">May 10, 2026</p>
 
         {weddingPassed ? (
           <p className="font-serif italic text-2xl text-blush-600">
