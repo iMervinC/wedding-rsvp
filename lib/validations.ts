@@ -16,9 +16,7 @@ export const rsvpSchema = z
       .min(1, 'At least 1 guest required')
       .max(10, 'Maximum 10 guests per RSVP')
       .optional(),
-    mealPreference: z.enum(['chicken', 'fish', 'vegetarian']).optional(),
     message: z.string().max(500, 'Message cannot exceed 500 characters').optional(),
-    songRequest: z.string().max(200, 'Song request cannot exceed 200 characters').optional(),
     // Honeypot — must be empty
     website: z.string().max(0, 'Bot detected').optional(),
   })
@@ -29,13 +27,6 @@ export const rsvpSchema = z
           code: z.ZodIssueCode.custom,
           path: ['guestCount'],
           message: 'Please enter the number of guests',
-        });
-      }
-      if (!data.mealPreference) {
-        ctx.addIssue({
-          code: z.ZodIssueCode.custom,
-          path: ['mealPreference'],
-          message: 'Please select a meal preference',
         });
       }
     }

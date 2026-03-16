@@ -159,44 +159,6 @@ export default function RSVPForm() {
               />
               <FieldError message={errors.guestCount?.message} />
             </div>
-
-            {/* Meal preference */}
-            <fieldset>
-              <legend className="font-sans text-sm font-semibold text-gray-700 mb-3">
-                Meal Preference
-                <span className="text-blush-500 ml-1" aria-label="required">*</span>
-              </legend>
-              <div className="grid grid-cols-3 gap-3">
-                {[
-                  { value: 'chicken', label: 'Chicken', emoji: '🍗' },
-                  { value: 'fish', label: 'Fish', emoji: '🐟' },
-                  { value: 'vegetarian', label: 'Vegetarian', emoji: '🥦' },
-                ].map(({ value, label, emoji }) => {
-                  const currentMeal = watch('mealPreference');
-                  return (
-                    <label
-                      key={value}
-                      className={`relative flex flex-col items-center gap-2 p-3 rounded-xl border-2 cursor-pointer transition-all duration-200 ${
-                        currentMeal === value
-                          ? 'border-blush-400 bg-blush-50 shadow-md'
-                          : 'border-blush-100 bg-white/60 hover:border-blush-200'
-                      }`}
-                    >
-                      <input
-                        type="radio"
-                        value={value}
-                        className="sr-only"
-                        aria-label={label}
-                        {...register('mealPreference')}
-                      />
-                      <span className="text-xl">{emoji}</span>
-                      <span className="font-sans text-xs font-semibold text-gray-600">{label}</span>
-                    </label>
-                  );
-                })}
-              </div>
-              <FieldError message={errors.mealPreference?.message} />
-            </fieldset>
           </div>
         )}
 
