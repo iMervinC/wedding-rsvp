@@ -1,10 +1,5 @@
 import type { RSVPFormData } from './validations';
 
-const MEAL_LABELS: Record<string, string> = {
-  chicken: 'Chicken',
-  fish: 'Fish',
-  vegetarian: 'Vegetarian',
-};
 
 /** HTML email sent to the couple */
 export function buildCoupleEmail(data: RSVPFormData): { subject: string; html: string; text: string } {
@@ -55,9 +50,7 @@ export function buildCoupleEmail(data: RSVPFormData): { subject: string; html: s
               ${row('Email', data.email)}
               ${row('Attending', statusLabel)}
               ${attending ? row('Number of Guests', String(data.guestCount ?? 1)) : ''}
-              ${attending && data.mealPreference ? row('Meal Preference', MEAL_LABELS[data.mealPreference] ?? data.mealPreference) : ''}
               ${data.message ? row('Message to the Couple', data.message, true) : ''}
-              ${data.songRequest ? row('Song Request', data.songRequest) : ''}
 
               <p style="margin:32px 0 0;font-family:sans-serif;font-size:13px;color:#9ca3af;text-align:center;">
                 This RSVP was submitted via your wedding website.
@@ -87,9 +80,7 @@ export function buildCoupleEmail(data: RSVPFormData): { subject: string; html: s
     `Email: ${data.email}`,
     `Attending: ${statusLabel}`,
     attending ? `Guests: ${data.guestCount ?? 1}` : '',
-    attending && data.mealPreference ? `Meal: ${MEAL_LABELS[data.mealPreference]}` : '',
     data.message ? `Message: ${data.message}` : '',
-    data.songRequest ? `Song Request: ${data.songRequest}` : '',
   ]
     .filter(Boolean)
     .join('\n');
@@ -152,8 +143,6 @@ export function buildGuestConfirmationEmail(data: RSVPFormData): { subject: stri
                   ${row('Name', data.fullName)}
                   ${row('Attending', attending ? 'Yes, attending' : 'Not attending')}
                   ${attending ? row('Guests', String(data.guestCount ?? 1)) : ''}
-                  ${attending && data.mealPreference ? row('Meal', MEAL_LABELS[data.mealPreference] ?? data.mealPreference) : ''}
-                  ${data.songRequest ? row('Song Request', data.songRequest) : ''}
                 </td></tr>
               </table>
 
