@@ -26,7 +26,7 @@ export function buildCoupleEmail(data: RSVPFormData): { subject: string; html: s
             <td style="background:linear-gradient(135deg,#e04f7a,#cc2f5e);padding:40px 40px 30px;text-align:center;">
               <p style="margin:0 0 8px;font-style:italic;color:rgba(255,255,255,0.8);font-size:16px;">New RSVP Received</p>
               <h1 style="margin:0;color:#ffffff;font-size:36px;font-weight:normal;letter-spacing:1px;">Bernadette &amp; Nicowel</h1>
-              <p style="margin:8px 0 0;color:rgba(255,255,255,0.7);font-size:14px;font-family:sans-serif;letter-spacing:2px;text-transform:uppercase;">Wedding · May 10, 2026</p>
+              <p style="margin:8px 0 0;color:rgba(255,255,255,0.7);font-size:14px;font-family:sans-serif;letter-spacing:2px;text-transform:uppercase;">Wedding · Sunday, May 10, 2026</p>
             </td>
           </tr>
 
@@ -61,7 +61,7 @@ export function buildCoupleEmail(data: RSVPFormData): { subject: string; html: s
           <!-- Footer -->
           <tr>
             <td style="background:#fdf2f5;padding:24px 40px;text-align:center;border-top:1px solid #fce4ec;">
-              <p style="margin:0;font-style:italic;color:#e04f7a;font-size:18px;">Bernadette &amp; Nicowel · May 10, 2026</p>
+              <p style="margin:0;font-style:italic;color:#e04f7a;font-size:18px;">Bernadette &amp; Nicowel · Sunday, May 10, 2026</p>
             </td>
           </tr>
 
@@ -116,7 +116,7 @@ export function buildGuestConfirmationEmail(data: RSVPFormData): { subject: stri
             <td style="background:linear-gradient(135deg,#e04f7a,#cc2f5e);padding:40px;text-align:center;">
               <p style="margin:0 0 6px;color:rgba(255,255,255,0.75);font-size:15px;font-style:italic;">RSVP Confirmation</p>
               <h1 style="margin:0;color:#ffffff;font-size:38px;font-weight:normal;">Bernadette &amp; Nicowel</h1>
-              <p style="margin:10px 0 0;color:rgba(255,255,255,0.7);font-size:13px;font-family:sans-serif;letter-spacing:3px;text-transform:uppercase;">May 10, 2026</p>
+              <p style="margin:10px 0 0;color:rgba(255,255,255,0.7);font-size:13px;font-family:sans-serif;letter-spacing:3px;text-transform:uppercase;">Sunday, May 10, 2026</p>
             </td>
           </tr>
 
@@ -151,10 +151,10 @@ export function buildGuestConfirmationEmail(data: RSVPFormData): { subject: stri
                   ? `<div style="background:#f0f5ee;border-radius:12px;padding:20px 24px;text-align:left;margin-bottom:24px;">
                       <p style="margin:0 0 8px;color:#5a7a50;font-family:sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:2px;font-weight:bold;">Event Details</p>
                       <p style="margin:0;color:#374151;font-family:sans-serif;font-size:14px;line-height:1.7;">
-                        <strong>Date:</strong> Saturday, May 10, 2026<br>
-                        <strong>Ceremony:</strong> 4:00 PM (arrive from 3:00 PM)<br>
+                        <strong>Date:</strong> Sunday, May 10, 2026<br>
+                        <strong>Ceremony:</strong> 2:00 PM<br>
                         <strong>Venue:</strong> Chancery, San Fernando, Pampanga<br>
-                        <strong>Dress Code:</strong> Garden formal
+                        <strong>Dress Code:</strong> Formal/Semi-Formal
                       </p>
                     </div>`
                   : ''
@@ -185,7 +185,7 @@ export function buildGuestConfirmationEmail(data: RSVPFormData): { subject: stri
   `.trim();
 
   const text = attending
-    ? `Dear ${firstName},\n\nThank you for your RSVP! We are so excited to have you at our wedding on May 10, 2026.\n\nVenue: Chancery, San Fernando, Pampanga\nCeremony: 4:00 PM\n\nWith love,\nBernadette & Nicowel`
+    ? `Dear ${firstName},\n\nThank you for your RSVP! We are so excited to have you at our wedding on Sunday, May 10, 2026.\n\nVenue: Chancery, San Fernando, Pampanga\nCeremony: 2:00 PM\n\nWith love,\nBernadette & Nicowel`
     : `Dear ${firstName},\n\nThank you for letting us know. We will miss you on our special day.\n\nWith love,\nBernadette & Nicowel`;
 
   return {
