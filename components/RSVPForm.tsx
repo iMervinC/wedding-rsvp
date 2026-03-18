@@ -46,7 +46,9 @@ export default function RSVPForm() {
   });
 
   const attending = watch('attending');
+  const guestCount = watch('guestCount') ?? 1;
   const messageValue = watch('message') ?? '';
+  const extraGuests = Math.max(0, Number(guestCount) - 1);
 
   const onSubmit = async (data: RSVPFormData) => {
     setServerError(null);
@@ -159,6 +161,27 @@ export default function RSVPForm() {
               />
               <FieldError message={errors.guestCount?.message} />
             </div>
+
+            {/* Additional guest names */}
+            {extraGuests > 0 && (
+              <div className="space-y-4">
+                <p className="font-sans text-sm font-semibold text-gray-700">Additional Guests</p>
+                {Array.from({ length: extraGuests }).map((_, i) => (
+                  <div key={i}>
+                    <Label htmlFor={`guestNames.${i}`} required>Guest {i + 2} Name</Label>
+                    <input
+                      id={`guestNames.${i}`}
+                      type="text"
+                      placeholder="Full name"
+                      className={`input-field ${errors.guestNames?.[i] ? 'border-red-400 focus:border-red-400 focus:ring-red-200' : ''}`}
+                      aria-invalid={!!errors.guestNames?.[i]}
+                      {...register(`guestNames.${i}`)}
+                    />
+                    <FieldError message={errors.guestNames?.[i]?.message} />
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         )}
 

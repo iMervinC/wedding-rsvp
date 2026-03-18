@@ -11,13 +11,13 @@ interface Event {
 
 const events: Event[] = [
   {
-    time: '3:00 PM',
+    time: '1:00 PM',
     title: 'Guest Arrival',
     description: 'Guests arrive and are welcomed with prosecco and canapés in the villa gardens.',
     icon: '🥂',
   },
   {
-    time: '4:00 PM',
+    time: '2:00 PM',
     title: 'Wedding Ceremony',
     description:
       'The ceremony takes place in the estate chapel, followed by a blessing under the olive trees.',

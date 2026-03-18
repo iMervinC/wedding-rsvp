@@ -43,6 +43,9 @@ export default function Hero() {
         <p className="font-sans text-white/80 text-sm md:text-xl tracking-widest uppercase font-light mb-2 animate-fade-up-delay">
           Sunday, May 10, 2026
         </p>
+        <p className="font-sans text-white/60 text-sm md:text-md tracking-wider animate-fade-up-delay">
+          2 o'clock in the afternoon
+        </p>
         <p className="font-sans text-white/60 text-sm md:text-lg tracking-wider animate-fade-up-delay">
           Chancery, San Fernando, Pampanga
         </p>

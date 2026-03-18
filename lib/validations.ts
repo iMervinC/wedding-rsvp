@@ -16,6 +16,9 @@ export const rsvpSchema = z
       .min(1, 'At least 1 guest required')
       .max(10, 'Maximum 10 guests per RSVP')
       .optional(),
+    guestNames: z
+      .array(z.string().min(2, 'Name must be at least 2 characters').max(100, 'Name is too long'))
+      .optional(),
     message: z.string().max(500, 'Message cannot exceed 500 characters').optional(),
     // Honeypot — must be empty
     website: z.string().max(0, 'Bot detected').optional(),
@@ -28,6 +31,17 @@ export const rsvpSchema = z
           path: ['guestCount'],
           message: 'Please enter the number of guests',
         });
+      }
+      const extraGuests = (data.guestCount ?? 1) - 1;
+      for (let i = 0; i < extraGuests; i++) {
+        const name = data.guestNames?.[i];
+        if (!name || name.trim().length < 2) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ['guestNames', i],
+            message: 'Please enter a name for this guest',
+          });
+        }
       }
     }
   });
