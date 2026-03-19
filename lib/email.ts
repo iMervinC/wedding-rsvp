@@ -50,6 +50,7 @@ export function buildCoupleEmail(data: RSVPFormData): { subject: string; html: s
               ${row('Email', data.email)}
               ${row('Attending', statusLabel)}
               ${attending ? row('Number of Guests', String(data.guestCount ?? 1)) : ''}
+              ${attending && data.guestNames && data.guestNames.length > 0 ? row('Additional Guests', data.guestNames.join(', ')) : ''}
               ${data.message ? row('Message to the Couple', data.message, true) : ''}
 
               <p style="margin:32px 0 0;font-family:sans-serif;font-size:13px;color:#9ca3af;text-align:center;">
@@ -80,6 +81,7 @@ export function buildCoupleEmail(data: RSVPFormData): { subject: string; html: s
     `Email: ${data.email}`,
     `Attending: ${statusLabel}`,
     attending ? `Guests: ${data.guestCount ?? 1}` : '',
+    attending && data.guestNames && data.guestNames.length > 0 ? `Additional Guests: ${data.guestNames.join(', ')}` : '',
     data.message ? `Message: ${data.message}` : '',
   ]
     .filter(Boolean)
@@ -143,6 +145,7 @@ export function buildGuestConfirmationEmail(data: RSVPFormData): { subject: stri
                   ${row('Name', data.fullName)}
                   ${row('Attending', attending ? 'Yes, attending' : 'Not attending')}
                   ${attending ? row('Guests', String(data.guestCount ?? 1)) : ''}
+                  ${attending && data.guestNames && data.guestNames.length > 0 ? row('Additional Guests', data.guestNames.join(', ')) : ''}
                 </td></tr>
               </table>
 
@@ -184,8 +187,12 @@ export function buildGuestConfirmationEmail(data: RSVPFormData): { subject: stri
 </html>
   `.trim();
 
+  const guestNamesText = attending && data.guestNames && data.guestNames.length > 0
+    ? `\nAdditional Guests: ${data.guestNames.join(', ')}\n`
+    : '';
+
   const text = attending
-    ? `Dear ${firstName},\n\nThank you for your RSVP! We are so excited to have you at our wedding on Sunday, May 10, 2026.\n\nVenue: Chancery, San Fernando, Pampanga\nCeremony: 2:00 PM\n\nWith love,\nBernadette & Nicowel`
+    ? `Dear ${firstName},\n\nThank you for your RSVP! We are so excited to have you at our wedding on Sunday, May 10, 2026.\n${guestNamesText}\nVenue: Chancery, San Fernando, Pampanga\nCeremony: 2:00 PM\n\nWith love,\nBernadette & Nicowel`
     : `Dear ${firstName},\n\nThank you for letting us know. We will miss you on our special day.\n\nWith love,\nBernadette & Nicowel`;
 
   return {
